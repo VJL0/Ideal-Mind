@@ -6,7 +6,16 @@ import NavigationBar from "./NavigationBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
+import { createGlobalStyle } from "styled-components";
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0; width: 100%;
+    background: teal;
+    font-family: Open-Sans, Helvetica, Sans-Serif;
+  }
+`;
 function App() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -19,6 +28,7 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
+      <GlobalStyle />
       <NavigationBar />
       <Routes>
         <Route path="/Ideal-Mind" element={<Home />} />
