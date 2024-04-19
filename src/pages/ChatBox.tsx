@@ -30,9 +30,6 @@ const ChatBox = () => {
   return (
     <Style>
       <Curve />
-      <button onClick={toggleOverlay} className="btn-modal">
-        Open
-      </button>
 
       <Overlay isOpen={isOpen}>
         <button onClick={toggleOverlay}>X</button>
