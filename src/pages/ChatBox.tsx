@@ -35,9 +35,7 @@ const ChatBox = () => {
         <h1>bhjn</h1>
         <h1>bhjn</h1>
       </Overlay>
-      <video playsInline autoPlay loop muted>
-        <source src="newbg.mp4" />
-      </video>
+      <video src="newbg.mp4" playsInline autoPlay loop muted />
       <TherapistChat />
     </Style>
   );

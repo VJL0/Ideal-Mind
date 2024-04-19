@@ -1,14 +1,18 @@
 import styled from "styled-components";
 
 const Style = styled.div`
-  margin: 1.5rem 0;
-  width: 50%;
-
+  flex: 0 0 50%;
+  padding: 20px;
+  border-radius: 8px;
+  @media (max-width: 480px) {
+    flex: 0 0 100%;
+  }
+  
   .card-border {
     width: 100% !important;
     min-height: 370px;
-    background: #fff;
-    box-shadow: 2px 4px 12px #00000014;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #0000001f;
     border-radius: 18px;
     position: relative;

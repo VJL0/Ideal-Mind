@@ -71,7 +71,7 @@ const Paragraph: React.FC<ParagraphProps> = ({ paragraph }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start 0.7", "start 0.25"],
+    offset: ["start 0.6", "start 0.25"],
   });
 
   const words = paragraph.split(" ");

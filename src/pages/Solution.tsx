@@ -18,17 +18,23 @@ const Style = styled.div`
       background-image: url("mobileSolution.png");
     }
   }
-  .demo-container {
-    width: 100%;
-    display: flex;
+
+  .about-site {
     .paragraph {
       margin: 0;
       padding: 0;
+      margin: 5rem;
+      font-size: 2rem;
     }
+  }
+
+  .demo-container {
     .text-container {
-      width: 50%;
       font-size: 1rem;
-      margin: 5vw;
+      .paragraph {
+        margin: 0;
+        padding: 0;
+      }
       .demo-button {
         margin-top: 5vw;
         background-color: black;
@@ -42,30 +48,35 @@ const Style = styled.div`
         vertical-align: middle;
       }
     }
-
     .video-container {
-      width: 50%;
-      margin: 0 5%;
-      pointer-events: none;
+      padding: 0 80px;
+      video {
+        width: 100%;
+        pointer-events: none;
+      }
     }
   }
 
-  video {
+  .demo-container,
+  .therapy-card-container {
     width: 100%;
-    //height: 100vh;
-    pointer-events: none;
-  }
-  .row {
-    margin: 0 5rem;
-    gap: 2.5rem;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
-  .about-site {
-    .paragraph {
-      margin: 0;
-      padding: 0;
-      margin: 5rem;
-      font-size: 2rem;
+
+  .text-container,
+  .video-container {
+    flex: 0 0 50%;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  @media (max-width: 480px) {
+    .text-container,
+    .video-container {
+      flex: 0 0 100%;
+      padding: 20px !important;
     }
   }
 `;
@@ -74,10 +85,12 @@ const Solution = () => {
   return (
     <Style>
       <div className="solutionHeader" />
+
       <div className="about-site">
         <CharTransition paragraph="Mental health support is a critical need that affects millions of people worldwide. Unfortunately, there are significant barriers preventing individuals from accessing the care they require. These barriers include cost, accessibility, stigma, and a shortage of human therapists. As the demand for mental health services surges, innovative solutions are essential to bridge this gap." />
         <CharTransition paragraph="My goal is to create an AI therapist assistant that offers reliable and immediate responses. AI therapy could potentially provide quicker and more affordable access to support compared to traditional mental health services." />
       </div>
+
       <div className="demo-container">
         <div className="text-container">
           <CharTransition paragraph="The artificial intelligence that works like a therapist" />
@@ -86,10 +99,11 @@ const Solution = () => {
           </Link>
         </div>
         <div className="video-container">
-          <video src="demo.mp4" autoPlay loop muted />
+          <video src="demo.mp4" playsInline autoPlay loop muted />
         </div>
       </div>
-      <div className="row">
+
+      <div className="therapy-card-container">
         <TherapyCard
           imageUrl={"therapyCard/accessibility.png"}
           title={"Accessibility"}
@@ -104,8 +118,6 @@ const Solution = () => {
             "Many people hesitate to seek help due to the fear of judgment or stigma. Chatbots allow users to express their feelings anonymously, reducing the emotional barriers associated with seeking support."
           }
         />
-      </div>
-      <div className="row">
         <TherapyCard
           imageUrl={"therapyCard/personalization.png"}
           title={"Personalization"}

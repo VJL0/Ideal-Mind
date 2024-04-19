@@ -16,7 +16,7 @@ const Style = styled.div`
       height: 100vh;
       .stickFigure {
         margin-left: -300px;
-        margin-top: 40vh;
+        margin-top: calc(100vh - 472px);
       }
       .quote {
         margin-left: -500px;

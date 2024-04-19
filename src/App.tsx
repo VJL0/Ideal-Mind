@@ -11,9 +11,16 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
-    padding: 0; width: 100%;
-    background: teal;
-    font-family: Open-Sans, Helvetica, Sans-Serif;
+    padding: 0; 
+    width: 100%;
+    //font-family: Open-Sans, Helvetica, Sans-Serif;
+    
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
 `;
 function App() {

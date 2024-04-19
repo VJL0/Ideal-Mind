@@ -219,15 +219,16 @@ function TherapistChat() {
             onClick={() => setEnableVoiceChat(!enableVoiceChat)}
           />
         </div>
-        {enableVoiceChat && (
-          <div className="options">
-            <h1> Female/Male Voice?</h1>
-            <Switch
-              isOn={femaleVoice}
-              onClick={() => setFemaleVoice(!femaleVoice)}
-            />
-          </div>
-        )}
+        <div
+          className="options"
+          style={{ visibility: `${enableVoiceChat ? "visible" : "hidden"}` }}
+        >
+          <h1> Female/Male Voice?</h1>
+          <Switch
+            isOn={femaleVoice}
+            onClick={() => setFemaleVoice(!femaleVoice)}
+          />
+        </div>
         <div style={{ height: "50px" }} />
         <div className="settings-heading">
           <h1> Erase Data</h1>

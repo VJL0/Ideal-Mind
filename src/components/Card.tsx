@@ -34,6 +34,9 @@ const Style = styled.div`
         width: 40%;
         position: relative;
         top: 10%;
+        @media (max-width: 480px) {
+          width: 100%;
+        }
         p {
           font-size: 16px;
           &::first-letter {
@@ -138,18 +141,20 @@ const Card: React.FC<CardProps> = ({
             )}
           </div>
 
-          <div className="imageContainer">
-            <motion.div
-              className="inner"
-              style={{
-                transform: `scale(${imageScale})`,
-                backgroundImage: `url(aboutCard/${img})`,
-                width: "100%",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            />
-          </div>
+          {window.innerWidth > 480 && (
+            <div className="imageContainer">
+              <motion.div
+                className="inner"
+                style={{
+                  transform: `scale(${imageScale})`,
+                  backgroundImage: `url(aboutCard/${img})`,
+                  width: "100%",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+            </div>
+          )}
         </div>
       </motion.div>
     </Style>
