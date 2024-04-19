@@ -107,7 +107,7 @@ function TherapistChat() {
       : [
           {
             role: "assistant",
-            content: "Hi friend! How's your day been treating you? 😊",
+            content: "Hi friend! How's your day been treating you?",
           },
         ];
   });
@@ -148,7 +148,7 @@ function TherapistChat() {
     setMessages([
       {
         role: "assistant",
-        content: "Hi friend! How's your day been treating you? 😊",
+        content: "Hi friend! How's your day been treating you?",
       },
     ]);
     localStorage.removeItem("chatMessages");
