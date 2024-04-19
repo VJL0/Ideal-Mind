@@ -16,9 +16,6 @@ const Style = styled.div`
     object-fit: cover;
     pointer-events: none;
   }
-  .btn-modal {
-    position: absolute;
-  }
 `;
 
 const ChatBox = () => {
