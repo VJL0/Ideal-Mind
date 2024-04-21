@@ -9,7 +9,7 @@ const Style = styled.div`
 
   .NavigationBar {
     position: sticky;
-    z-index: 10000;
+    z-index: 2000000000;
   }
 
   .nav-container {

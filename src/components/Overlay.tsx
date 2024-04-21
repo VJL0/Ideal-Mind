@@ -24,7 +24,7 @@ const Style = styled.div`
   .overlay {
     background: rgba(49, 49, 49, 0.8);
   }
-  .modal-content {
+  .overlay-content {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -54,7 +54,7 @@ const Overlay: React.FC<OverlayProps> = ({ isOpen, children }) => {
       {isOpen && (
         <div className="modal">
           <div className="overlay"></div>
-          <div className="modal-content">{children}</div>
+          <div className="overlay-content">{children}</div>
         </div>
       )}
     </Style>

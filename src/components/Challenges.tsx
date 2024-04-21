@@ -6,17 +6,23 @@ import styled from "styled-components";
 const Style = styled.div`
   //position: absolute;
   //top: 0;
-  height: 100vh;
+  height: 100%;
 
-  .flex-container {
+  .full-container {
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .cont {
+      margin-bottom: 50px;
+      flex: 0 0 calc(50% - 50px);
+      padding: 20px;
+      @media (max-width: 480px) {
+        flex: 0 0 100%;
+      }
+    }
   }
+
   .cont1 {
-    //padding: 10vw;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
     h1 {
       text-align: center;
       margin: 2rem 0;
@@ -29,7 +35,9 @@ const Style = styled.div`
     }
   }
   .cont2 {
-    flex: 1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
     background-color: #b2d6d6;
     h4 {
       text-transform: lowercase;
@@ -70,9 +78,9 @@ const Challenges = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   return (
     <Style>
-      <div className="flex-container">
-        <div className="cont1">
-          <h1>Ways to act based on your role</h1>
+      <div className="full-container">
+        <div className="cont cont1">
+          <h1>Ways to act based on your role:</h1>
           <div className="options-container">
             {helpingOptions.map(({ role }, index) => {
               return (
@@ -91,7 +99,7 @@ const Challenges = () => {
             })}
           </div>
         </div>
-        <div className="cont2">
+        <div className="cont cont2">
           <img
             src={`helpingOptionsImages/${helpingOptions[selectedTab].image}`}
           />

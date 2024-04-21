@@ -23,7 +23,7 @@ const Style = styled.div`
     .paragraph {
       margin: 0;
       padding: 0;
-      margin: 5rem;
+      margin: 20px;
       font-size: 2rem;
     }
   }

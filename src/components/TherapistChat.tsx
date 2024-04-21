@@ -89,15 +89,14 @@ const Style = styled.div`
   }
 `;
 
-function TherapistChat() {
+interface TherapistChatProps {
+  USERINFO: any;
+}
+
+const TherapistChat: React.FC<TherapistChatProps> = ({ USERINFO }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [enableVoiceChat, setEnableVoiceChat] = useState(false);
   const [femaleVoice, setFemaleVoice] = useState(false);
-
-  const toggleOverlay = () => {
-    setIsOpen(!isOpen);
-  };
-
   const AUTOSCROLL = useRef<HTMLDivElement>(null);
   const [inputText, setInputText] = useState("");
   const [messages, setMessages] = useState<any[]>(() => {
@@ -111,6 +110,10 @@ function TherapistChat() {
           },
         ];
   });
+
+  const toggleOverlay = () => {
+    setIsOpen(!isOpen);
+  };
 
   const sendMessage = async () => {
     if (!inputText) return;
@@ -172,6 +175,9 @@ function TherapistChat() {
     },
     [sendMessage]
   );
+  useEffect(() => {
+    INSTRUCTIONS.content += USERINFO;
+  }, []);
 
   return (
     <Style>
@@ -239,6 +245,6 @@ function TherapistChat() {
       </Overlay>
     </Style>
   );
-}
+};
 
 export default TherapistChat;

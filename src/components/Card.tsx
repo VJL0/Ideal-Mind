@@ -1,5 +1,5 @@
 import { useTransform, motion, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 const Style = styled.div`
@@ -106,6 +106,17 @@ const Card: React.FC<CardProps> = ({
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const scale = useTransform(progress, range, [1, targetScale]);
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Style ref={container} className="cardContainer">
       <motion.div
@@ -141,7 +152,7 @@ const Card: React.FC<CardProps> = ({
             )}
           </div>
 
-          {window.innerWidth > 480 && (
+          {windowWidth > 480 && (
             <div className="imageContainer">
               <motion.div
                 className="inner"

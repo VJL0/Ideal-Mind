@@ -6,7 +6,7 @@ const Style = styled.div`
   .curve {
     svg,
     .background {
-      z-index: 1000;
+      z-index: 1000000000;
       position: fixed;
       height: calc(100vh + 600px);
       width: 100vw;

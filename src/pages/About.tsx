@@ -34,14 +34,16 @@ const About = () => {
         />
         <Cards />
         <Challenges />
-        {/* <h1>
-        While their is nothing wrong with the current way to adress problems.
-        With the increase of ai integration in multiple asspets of life. The
-        problem is that there is a lack of professional therapists. My perspose
-        of this website is to create to an AI therapist assistent for relaible
-        and imdediate responses. AI therapy could also provide quicker and
-        cheaper access to support than traditional mental health services.
-      </h1> */}
+        <hr className="solid" />
+        <h1>
+          While their is nothing wrong with the current way to adress problems.
+          With the increase of ai integration in multiple asspets of life. The
+          problem is that there is a lack of professional therapists. My
+          perspose of this website is to create to an AI therapist assistent for
+          relaible and imdediate responses. AI therapy could also provide
+          quicker and cheaper access to support than traditional mental health
+          services.
+        </h1>
       </Style>
     </>
   );
