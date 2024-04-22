@@ -91,6 +91,7 @@ const ChatBox = () => {
   const [gender, setGender] = useState("");
   const [background, setBackground] = useState("");
   const [additionalInfo, setAdditionalInfo] = useState("");
+  const [chatKey, setChatKey] = useState(0);
 
   const increment = () => {
     setSelectedTab(selectedTab + 1);
@@ -98,6 +99,11 @@ const ChatBox = () => {
 
   const decrement = () => {
     setSelectedTab(selectedTab - 1);
+  };
+
+  const handleFinish = () => {
+    toggleOverlay();
+    setChatKey((prevKey) => prevKey + 1);
   };
 
   return (
@@ -215,7 +221,7 @@ const ChatBox = () => {
                 >
                   Back
                 </button>
-                <button onClick={toggleOverlay}>Finish</button>
+                <button onClick={handleFinish}>Finish</button>
               </>
             )}
           </motion.div>
@@ -225,6 +231,7 @@ const ChatBox = () => {
       <video src="newbg.mp4" playsInline autoPlay loop muted />
 
       <TherapistChat
+        key={chatKey}
         USERINFO={`This Person is a client, This info is very important: Name: ${name},  Age: ${age}, Gender: ${gender}, Background: ${background}, Additional Info: ${additionalInfo}`}
       />
     </Container>

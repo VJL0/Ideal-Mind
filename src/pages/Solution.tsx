@@ -19,17 +19,10 @@ const Style = styled.div`
     }
   }
 
-  .about-site {
-    .paragraph {
-      margin: 0;
-      padding: 0;
-      margin: 20px;
-      font-size: 2rem;
-    }
-  }
-
   .demo-container {
     .text-container {
+      padding-left: 80px;
+      padding-top: 80px;
       font-size: 1rem;
       .paragraph {
         margin: 0;
@@ -79,18 +72,36 @@ const Style = styled.div`
       padding: 20px !important;
     }
   }
+  .our-solution {
+    display: flex;
+    font-size: 20px;
+    line-height: 1;
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    .text {
+      font-size: 60px;
+    }
+    .paragraph {
+      margin: 0;
+      padding: 0;
+      margin: 20px;
+      font-size: 2rem;
+      @media (max-width: 480px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
 `;
 
 const Solution = () => {
   return (
     <Style>
       <div className="solutionHeader" />
-
-      <div className="about-site">
-        <CharTransition paragraph="Mental health support is a critical need that affects millions of people worldwide. Unfortunately, there are significant barriers preventing individuals from accessing the care they require. These barriers include cost, accessibility, stigma, and a shortage of human therapists. As the demand for mental health services surges, innovative solutions are essential to bridge this gap." />
-        <CharTransition paragraph="My goal is to create an AI therapist assistant that offers reliable and immediate responses. AI therapy could potentially provide quicker and more affordable access to support compared to traditional mental health services." />
+      <div className="our-solution">
+        <h1 className="text">Our Solution</h1>
+        <CharTransition paragraph="Artificial intelligence is transforming healthcare and wellness, providing solutions for mental and physical health. As it becomes integrated into various aspects of life, the shortage of professional therapists becomes apparent. Our objective is to develop an AI therapist assistant that delivers prompt and dependable responses. AI therapy holds promise for offering faster and more cost-effective support than traditional mental health services." />{" "}
       </div>
-
       <div className="demo-container">
         <div className="text-container">
           <CharTransition paragraph="The artificial intelligence that works like a therapist" />

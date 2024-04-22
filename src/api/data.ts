@@ -1,30 +1,31 @@
 export const projects = [
   {
+    title: "The Challange",
+    description:
+      "Young people are dealing with anxiety, prisons have essentially become mental health centers, and deaths from drug overdoses are increasing—but we know the solution if we're willing to act. Our nation is facing a new public health crisis, accelerated by the COVID-19 pandemic but not solely caused by it. Feelings of anxiety and depression have skyrocketed to the point where it's impossible to ignore.",
+    src: "chart.webp",
+    color: "#BFD5E3",
+  },
+  {
+    title: "Mental health",
+    description:
+      "Mental health support is a critical need that affects millions of people worldwide. Unfortunately, there are significant barriers preventing individuals from accessing the care they require. These barriers include cost, accessibility, stigma, and a shortage of human therapists. As the demand for mental health services surges, innovative solutions are essential to bridge this gap.",
+    src: "theChallenge.png",
+    color: "#7F97A3",
+  },
+  {
     title: "Why Your Mental Health Matters",
-    description:"Prioritizing mental health is essential for overall well-being. It affects cognitive functioning, self-esteem, relationships, and productivity. Mental health conditions are common, yet stigma often prevents seeking help. Acknowledging invisible symptoms and seeking professional guidance are crucial steps. Let’s prioritize our mental well-being and foster open conversations.",
+    description:
+      "Prioritizing mental health is essential for overall well-being. It affects cognitive functioning, self-esteem, relationships, and productivity. Mental health conditions are common, yet stigma often prevents seeking help. Acknowledging invisible symptoms and seeking professional guidance are crucial steps. Let’s prioritize our mental well-being and foster open conversations.",
     src: "itMatters.png",
     color: "#A1BDCD",
   },
   {
-    title: "Clément Chapillon",
-    description:
-      "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
-    src: "tree.jpg",
-    color: "#7F97A3",
-  },
-  {
     title: "Why Young Mental Health Matters",
     description:
-      "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
-    src: "water.jpg",
+      "According to the National Alliance on Mental Illness (NAMI), the majority of mental illnesses (75 percent) begin by age 24. However, 50 percent of all lifetime mental illnesses begin by age 14. This means that most mental health conditions emerge during childhood and adolescence. ",
+    src: "teens.png",
     color: "#5A737D",
-  },
-  {
-    title: "Mathias Svold and Ulrik Hasemann",
-    description:
-      "The coastlines of Denmark are documented in tonal colors in a pensive new series by Danish photographers Ulrik Hasemann and Mathias Svold; an ongoing project investigating how humans interact with and disrupt the Danish coast.",
-    src: "house.jpg",
-    color: "#BFD5E3",
   },
   {
     title: "How can we take action?",
@@ -34,8 +35,6 @@ export const projects = [
     color: "#7F9BAB",
   },
 ];
-
-
 
 export const helpingOptions = [
   {
@@ -105,10 +104,6 @@ export const helpingOptions = [
     ],
   },
 ];
-
-
-
-
 
 export const mentalHealthQuotes = [
   "Your mental health is just as important as your physical health.",
