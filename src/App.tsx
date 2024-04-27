@@ -2,7 +2,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import ChatBox from "./pages/ChatBox";
 import Solution from "./pages/Solution";
-import NavigationBar from "./NavigationBar2";
+import NavigationBar from "./NavigationBar";
 import PageTransition from "./components/PageTransition";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
