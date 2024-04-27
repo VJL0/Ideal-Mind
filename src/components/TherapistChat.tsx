@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import styled from "styled-components";
-import { INSTRUCTIONS, openai } from "../api/therapistDataSet";
 import Overlay from "./Overlay";
 import Switch from "./Switch";
+import { INSTRUCTIONS } from "../backend/therapistDataSet";
+import { getAudioResponse, getChatResponse } from "../backend/functions";
 
 const Style = styled.div`
   width: 100%;
@@ -123,17 +124,10 @@ const TherapistChat: React.FC<TherapistChatProps> = ({ USERINFO }) => {
     setInputText("");
 
     try {
-      const response = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
-        messages: [INSTRUCTIONS, ...newMessages],
-      });
+      const response = await getChatResponse(INSTRUCTIONS, ...newMessages);
 
       if (enableVoiceChat) {
-        const audioResponse = await openai.audio.speech.create({
-          model: "tts-1",
-          voice: `${!femaleVoice ? "alloy" : "onyx"}`,
-          input: `${response.choices[0].message.content}`,
-        });
+        const audioResponse = await getAudioResponse(femaleVoice, response);
         const blob = new Blob([await audioResponse.arrayBuffer()], {
           type: "audio/mpeg",
         });

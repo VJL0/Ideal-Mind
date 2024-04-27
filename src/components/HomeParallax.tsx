@@ -38,7 +38,7 @@ const Style = styled.div`
   }
 `;
 
-function MultiLayerParallax() {
+const MultiLayerParallax = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -98,5 +98,5 @@ function MultiLayerParallax() {
       </motion.h1>
     </Style>
   );
-}
+};
 export default MultiLayerParallax;

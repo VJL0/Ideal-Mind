@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import TherapistChat from "../components/TherapistChat";
-import Curve from "../components/Curve";
 import Overlay from "../components/Overlay";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -108,7 +107,6 @@ const ChatBox = () => {
 
   return (
     <Container>
-      <Curve />
       <Overlay isOpen={firstOpen}>
         <AnimatePresence mode="wait">
           <motion.div
@@ -227,9 +225,7 @@ const ChatBox = () => {
           </motion.div>
         </AnimatePresence>
       </Overlay>
-
       <video src="newbg.mp4" playsInline autoPlay loop muted />
-
       <TherapistChat
         key={chatKey}
         USERINFO={`This Person is a client, This info is very important: Name: ${name},  Age: ${age}, Gender: ${gender}, Background: ${background}, Additional Info: ${additionalInfo}`}

@@ -5,7 +5,7 @@ import HorizontalScroll from "../components/HorizontalScroll";
 import ZoomParallax from "../components/ZoomParallax";
 import CharTransition from "../components/CharTransition";
 import { useMotionValueEvent, useScroll } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Navigate } from "react-router-dom";
 
 const Style = styled.div`
@@ -32,9 +32,6 @@ const Home = () => {
       setAtBottom(true);
     } else setAtBottom(false);
   });
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [atBottom]);
 
   return (
     <Style>

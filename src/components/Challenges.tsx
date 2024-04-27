@@ -1,4 +1,4 @@
-import { helpingOptions } from "../api/data";
+import { helpingOptions } from "../backend/data";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import styled from "styled-components";

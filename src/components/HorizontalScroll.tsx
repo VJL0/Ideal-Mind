@@ -1,4 +1,4 @@
-import { mentalHealthQuotes } from "../api/data";
+import { mentalHealthQuotes } from "../backend/data";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import styled from "styled-components";

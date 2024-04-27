@@ -1,4 +1,4 @@
-import { projects } from "../api/data";
+import { projects } from "../backend/data";
 import Card from "./Card";
 import { useScroll } from "framer-motion";
 import { useRef } from "react";
