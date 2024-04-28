@@ -15,9 +15,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0; 
     width: 100%;    
-    overflow: hidden; /* Hide scrollbars */
+    
   }
-  
+  body::-webkit-scrollbar {
+  display: none;
+  }
   *,
   *::before,
   *::after {
